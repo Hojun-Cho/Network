@@ -5,6 +5,11 @@ rdt 3.0은 전송-후-대기(stop-and-wait)프로토콜을 사용한다.
 utilization= ( L/R ) / ( RTT + L/R )        
 utilization=  ( N*L/R ) / ( RTT + L/R ) 이렇게 같은 시간 동안 패킷을 더 보내주면 해결 가능하다. 이 방식을 파이프라이닝이라고 한다.    
 
+### 윈도우
+버퍼이다.       
+윈도우의 사이즈만큼 ACK에 관계없이 전송한다.(단 flow control은 한다,리시버에 맞춰서 전송)
+
+https://www2.tkn.tu-berlin.de/teaching/rn/animations/gbn_sr/
 ### GO BACK N (GBN) 
 1. GBN프로토콜에서는 송신자는 확인응답을 기다리지 않고 여러 패킷을 전송할 수 있다.그러나 파이프라인에서 확인응답이 안된 패킷의 최대 허용 수 N보다 크지 않아야 한다.         
 2. N은 **윈도우 사이즈**이다.GBN은 **슬라이딩 윈도우 프로토콜**라고 한다.    
