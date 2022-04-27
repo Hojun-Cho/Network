@@ -1,4 +1,5 @@
 # rdt3.0의 문제점
+신뢰 전송이 필요함!!!!!!!!         
 rdt 3.0은 전송-후-대기(stop-and-wait)프로토콜을 사용한다.    
 문제는 RTT동안 아무것도 하지 않으므로 utilization이 떨어진다.그럼 어떻게 utilization을 올릴까??      
 utilization= ( L/R ) / ( RTT + L/R )        
